@@ -1,7 +1,7 @@
 ---
 title: "Class 10: Structural Bioinformatics (pt. 1)"
 author: "Saket Chodavarapu (PID: A18582086)"
-format: pdf
+format: gfm
 toc: true
 ---
 
@@ -111,19 +111,22 @@ aa <- get.seq(id)
 ```
 
 ```{r}
-blast <- blast.pdb(aa)
+#blast <- blast.pdb(aa)
 ```
 Have a wee peek:
 ```{r}
-head(blast$hit.tbl)
+#head(blast$hit.tbl)
 ```
 
 ```{r}
-hits <- plot(blast)
+#hits <- plot(blast)
 ```
 
 Peek at our "top hits"
 ```{r}
+hits <- NULL
+hits$pdb.id <- c('1AKE_A','6S36_A','6RZE_A','3HPR_A','1E4V_A','5EJE_A','1E4Y_A','3X2S_A','6HAP_A','6HAM_A','4K46_A','3GMT_A','4PZL_A')
+
 head(hits$pdb.id)
 ```
 
@@ -146,11 +149,11 @@ Let's have a wee peek at our structures after "fitting" or superposing:
 
 ```{r}
 library(bio3dview)
-view.pdbs(pdbs)
+#view.pdbs(pdbs)
 ```
 
 ```{r}
-view.pdbs(pdbs, colorScheme = "residue")
+#view.pdbs(pdbs, colorScheme = "residue")
 ```
 
 We can run functions like `rmsd()`, `rmsf()`, and the best `pca()`
@@ -167,7 +170,7 @@ plot(pc.xray, 1:2)
 Finally, let's make a wee movie of the major "motion" or structural difference in the dataset - we call this a "trajectory"
 
 ```{r}
-mktrj(pc.xray, file="results2.pdb")
+# mktrj(pc.xray, file="results2.pdb")
 ```
 
 

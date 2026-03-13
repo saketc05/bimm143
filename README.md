@@ -15,7 +15,7 @@ Class 4 [Data Analysis with R](Class4Jan16/Class4.pdf)
 
 *R Fundamentals*
 
-Class 5 [Data visualization with ggplot](Class5Jan21/Class5.pdf)
+Class 5 [Data visualization with ggplot](Class5Jan21/Class5.md)
 
 Class 6 [Writing Functions in R](Class6Jan23/Class6.pdf)
 

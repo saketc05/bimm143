@@ -32,7 +32,7 @@ With “base R” we can simply:
 plot(cars)
 ```
 
-![](class5_files/figure-commonmark/unnamed-chunk-2-1.png)
+![](Class5_files/figure-commonmark/unnamed-chunk-2-1.png)
 
 Now let’s try ggplot. First I need to install the package using
 `install.packages("ggplot2")`.
@@ -49,7 +49,7 @@ library(ggplot2)
 ggplot(cars)
 ```
 
-![](class5_files/figure-commonmark/unnamed-chunk-3-1.png)
+![](Class5_files/figure-commonmark/unnamed-chunk-3-1.png)
 
 Every ggplot needs at least 3 things:
 
@@ -65,7 +65,7 @@ ggplot(cars) +
   geom_line()
 ```
 
-![](class5_files/figure-commonmark/unnamed-chunk-4-1.png)
+![](Class5_files/figure-commonmark/unnamed-chunk-4-1.png)
 
 ``` r
 ggplot(cars) +
@@ -80,7 +80,7 @@ ggplot(cars) +
 
     `geom_smooth()` using formula = 'y ~ x'
 
-![](class5_files/figure-commonmark/unnamed-chunk-5-1.png)
+![](Class5_files/figure-commonmark/unnamed-chunk-5-1.png)
 
 ## Gene Expression Plot
 
@@ -109,7 +109,7 @@ ggplot(genes) +
   geom_point(col="blue", alpha=0.2)
 ```
 
-![](class5_files/figure-commonmark/unnamed-chunk-7-1.png)
+![](Class5_files/figure-commonmark/unnamed-chunk-7-1.png)
 
 Let’s color by `State` up, down, or no change.
 
@@ -134,7 +134,7 @@ ggplot(genes) +
   theme_minimal()
 ```
 
-![](class5_files/figure-commonmark/unnamed-chunk-9-1.png)
+![](Class5_files/figure-commonmark/unnamed-chunk-9-1.png)
 
 ## Going further with gapminder
 
@@ -182,7 +182,7 @@ ggplot(gapminder) +
   geom_point()
 ```
 
-![](class5_files/figure-commonmark/unnamed-chunk-13-1.png)
+![](Class5_files/figure-commonmark/unnamed-chunk-13-1.png)
 
 I want to see a plot for each continent - in ggplot lingo this is called
 “faceting”
@@ -194,7 +194,7 @@ ggplot(gapminder) +
   facet_wrap(~continent)
 ```
 
-![](class5_files/figure-commonmark/unnamed-chunk-14-1.png)
+![](Class5_files/figure-commonmark/unnamed-chunk-14-1.png)
 
 ## First look at the dplyr package
 
@@ -232,4 +232,4 @@ ggplot(input) +
   facet_wrap(~year)
 ```
 
-![](class5_files/figure-commonmark/unnamed-chunk-17-1.png)
+![](Class5_files/figure-commonmark/unnamed-chunk-17-1.png)

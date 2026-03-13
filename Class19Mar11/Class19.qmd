@@ -24,11 +24,11 @@ mutant <- seqs$ali[2,]
 ```
 
 ```{r}
-blast <- blast.pdb(healthy)
+#blast <- blast.pdb(healthy)
 ```
 
 ```{r}
-head(blast)
+#head(blast)
 ```
 
 
