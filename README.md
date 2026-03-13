@@ -5,11 +5,11 @@ Repository for BIMM 143 Winter 2026, a Bioinformatics class at UCSD.
 
 *Introductory classes*
 
-Class 1 [Introduction to Bioinformatics](Class1Jan7/Class1.pdf)
+Class 1 [Introduction to Bioinformatics](Class1Jan7/class01.pdf)
 
-Class 2 [Sequence Alignment Fundamentals, Algorithms, and Applications](Class2Jan9/Class2.pdf)
+Class 2 [Sequence Alignment Fundamentals, Algorithms, and Applications](Class2Jan9/class02.pdf)
 
-Class 3 [Advanced Sequence Alignment and Database Searching](Class3Jan14/Class3.pdf)
+Class 3 [Advanced Sequence Alignment and Database Searching](Class3Jan14/class03.pdf)
 
 Class 4 [Data Analysis with R](Class4Jan16/Class4.pdf)
 
