@@ -1,0 +1,61 @@
+---
+title: "Find A Gene Project"
+author: "Saket Chodavarapu (PID: A18582086)"
+format: html
+---
+
+## Heatmap
+
+```{r}
+library(bio3d)
+
+seqs <- read.fasta("alignedsequences.fst")
+```
+
+```{r}
+seq_identity_matrix <- seqidentity(seqs)
+seq_identity_matrix
+```
+
+```{r}
+library(pheatmap)
+
+pheatmap(seq_identity_matrix,
+         color = colorRampPalette(c("yellow", "orange", "red"))(100),
+         display_numbers = TRUE,
+         main = "KIF11 Multiple Sequence Alignment Heatmap")
+```
+
+## Searching Protein Structure Database for Similar Atomic Structures
+
+```{r}
+cons <- consensus(seqs)
+```
+
+```{r}
+blast <- blast.pdb(cons$seq)
+```
+
+```{r}
+plot.blast(blast)
+```
+
+```{r}
+anno <- pdb.annotate(blast$hit.pdb)
+str(anno)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+---
+title: "Class 19: Cancer Mutation Analysis"
+author: "Saket Chodavarapu (PID: A18582086)"
+format: html
+---
+
+```{r}
+library(bio3d)
+
+seqs <- read.fasta("A18582086_mutant_seq.fa")
+head(seqs)
+```
+
+```{r}
+diffs <- seqs$ali[1,] != seqs$ali[2,]
+
+which(diffs)
+seqs$ali[,diffs]
+```
+
+```{r}
+healthy <- seqs$ali[1,]
+mutant <- seqs$ali[2,]
+```
+
+```{r}
+blast <- blast.pdb(healthy)
+```
+
+```{r}
+head(blast)
+```
+
+
+
+
+
+
+
+
+
+

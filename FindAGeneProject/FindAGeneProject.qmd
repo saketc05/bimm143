@@ -1,0 +1,85 @@
+---
+title: "Find A Gene Project"
+author: "Saket Chodavarapu (PID: A18582086)"
+format: html
+---
+
+## Heatmap
+
+```{r}
+library(bio3d)
+
+seqs <- read.fasta("alignedsequences.fst")
+```
+
+```{r}
+seq_identity_matrix <- seqidentity(seqs)
+seq_identity_matrix
+```
+
+```{r}
+library(pheatmap)
+
+pheatmap(seq_identity_matrix,
+         color = colorRampPalette(c("yellow", "orange", "red"))(100),
+         display_numbers = TRUE,
+         main = "KIF11 Multiple Sequence Alignment Heatmap")
+```
+
+## Searching Protein Structure Database for Similar Atomic Structures
+
+```{r}
+cons <- consensus(seqs)
+```
+
+```{r}
+blast <- blast.pdb(cons$seq)
+```
+
+```{r}
+plot.blast(blast)
+```
+
+```{r}
+head(blast, 30)
+head(pdb.annotate(blast$hit.tbl$subjectids), 30)
+```
+
+## Alphafold
+
+```{r}
+aln_file <- list.files(path="test_8accf",
+                       pattern=".a3m$",
+                        full.names = TRUE)
+aln_file
+```
+
+```{r}
+aln <- read.fasta(aln_file[1], to.upper = TRUE)
+```
+
+```{r}
+dim(aln$ali)
+```
+
+```{r}
+sim <- conserv(aln)
+```
+
+```{r}
+plotb3(sim[1:250], sse=trim.pdb(read.pdb("8YHH"), chain="A"),
+       ylab="Conservation Score")
+```
+
+```{r}
+con <- consensus(aln, cutoff = 0.88)
+con$seq
+```
+
+
+
+
+
+
+
+
